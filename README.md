@@ -1,5 +1,6 @@
 # VGS-Kanji-Extension
-VGSの拡張漢字ROMをVGSアプリ（GameDaddyを含む）組み込むことで、日本語を表示することができます。
+- VGSの拡張漢字ROMをVGSアプリに組み込むことで、日本語を表示することができます。
+- GameDaddyでも使用することができます。
 
 # 使い方
 1. GSLOT255.CHRをVGSアプリに組み込む
