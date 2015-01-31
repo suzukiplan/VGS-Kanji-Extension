@@ -1,8 +1,18 @@
 # VGS-Kanji-Extension
-VGSの拡張漢字ROM
+VGSの拡張漢字ROMをVGSアプリ（GameDaddyを含む）組み込むことで、日本語を表示することができます。
 
 # 使い方
-後で書く。
+1. GSLOT255.CHRをVGSアプリに組み込む
+2. DSLOT255.DATをVGSアプリに組み込む
+3. game.cのvge_init関数の定義内容を元にDSLOT255をロードする処理を実装する
+4. game.cに定義されているgetcode関数およびputkanji関数を自分のアプリのgame.cに張り付ける
+
+（補足）
+- 上記の手順を踏めば、putkanji関数で日本語フォントを表示できます。
+- 初期VGS、GameDaddyの両方で同じ手順で使えます（GameDaddyの場合はputkanjiの引数colに7を指定）
+- putkanji関数の引数textには、SJISので、JIS X 0201の7bit ASCII 及び JIS X 0208の日本語を指定できます。
+- ソースコード上にハードコーディングする場合、エンコードをSJISにする必要があります。
+- 最近の（主に海外製の）IDEはSJISに対応していなかったりするので、通常はハードコーディングせず、本サンプルのようにDATA SLOT上にバイナリデータとして定義することを推奨します。
 
 # ライセンス
 GSLOT255.CHRは、門真 なむ様の8×12 ドット日本語フォント「k8x12」のk8x12S（2015年1月31日時点のもの）に含まれる7bit ASCII（JIS X 0201の内0x20～0x7Fの範囲）のフォントデータをvgsbmpコマンドで変換したものです。
