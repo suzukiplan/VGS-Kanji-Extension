@@ -1,6 +1,6 @@
 /* VGS Kanji Extension - sample code */
 /* (C)2015, SUZUKI PLAN */
-/* Author: Y.Suzuki Apr-2013 */
+/* Author: Yoji Suzuki */
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
