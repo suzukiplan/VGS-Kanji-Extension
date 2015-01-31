@@ -4,7 +4,7 @@
 - GameDaddyでも使用することができます。
 
 # 使い方
-1. GSLOT255.CHRをVGSアプリに組み込む
+1. GSLOT255.CHRをVGSアプリに組み込む（GameDaddy の場合は GSLOT255_GD.CHR から _GD を外したものを組み込む）
 2. DSLOT255.DATをVGSアプリに組み込む
 3. game.cのvge_init関数の定義内容を元にDSLOT255をロードする処理を実装する
 4. game.cに定義されているgetcode関数およびputkanji関数を自分のアプリのgame.cに張り付ける
