@@ -6,14 +6,17 @@
 # 使い方
 1. GSLOT255.CHRをVGSアプリに組み込む（GameDaddy の場合は GSLOT255_GD.CHR から _GD を外したものを組み込む）
 2. DSLOT255.DATをVGSアプリに組み込む
-3. game.cのvge_init関数の定義内容を元にDSLOT255をロードする処理を実装する
+3. game.cのvge_init関数の定義内容を元にDSLOT255をスタティック変数 _kanji へロードする処理を実装する
 4. game.cに定義されているgetcode関数およびputkanji関数を自分のアプリのgame.cに張り付ける
+
+※VGS2 mk-IIで利用する場合、game.c中のプレフィクス vge_ は vgs2_ に置換する必要があります。
 
 （補足）
 - 上記の手順を踏めば、putkanji関数で日本語フォントを表示できます。
 - 初期VGS、GameDaddyの両方で同じ手順で使えます（GameDaddyの場合はputkanjiの引数colに7を指定）
-- putkanji関数の引数textには、SJISので、JIS X 0201の7bit ASCII 及び JIS X 0208の日本語を指定できます。
-- ソースコード上にハードコーディングする場合、エンコードをSJISにする必要があります。
+- putkanji関数の引数textには、SJISで JIS X 0201 の 7bit ASCII範囲 及び JIS X 0208 の日本語を指定できます。
+- 半角カタカナは利用できません。
+- ソースコード上にハードコーディングする場合、エンコーディングをSJISにする必要があります。
 - 最近の（主に海外製の）IDEはSJISに対応していなかったりするので、通常はハードコーディングせず、本サンプルのようにDATA SLOT上にバイナリデータとして定義することを推奨します。
 
 # DSLOT255.DAT (KANJI.ROM)
