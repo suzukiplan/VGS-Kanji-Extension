@@ -1,7 +1,7 @@
 # VGS-Kanji-Extension
 - VGSの拡張漢字ROMをVGSアプリに組み込むことで、日本語を表示することができます。
 - VGSでRPG、物語性のあるSLG、ノベルゲームなどを開発する時にご活用ください。
-- GameDaddyでも使用することができます。
+- VGS mk-II（GameDaddy）でも使用することができます。
 
 # 使い方
 1. GSLOT255.CHRをVGSアプリに組み込む（GameDaddy の場合は GSLOT255_GD.CHR から _GD を外したものを組み込む）
@@ -9,7 +9,7 @@
 3. game.cのvge_init関数の定義内容を元にDSLOT255をスタティック変数 _kanji へロードする処理を実装する
 4. game.cに定義されているgetcode関数およびputkanji関数を自分のアプリのgame.cに張り付ける
 
-※VGS2 mk-IIで利用する場合、game.c中のプレフィクス vge_ は vgs2_ に置換する必要があります。
+※GameDaddy で利用する場合、本リポジトリの game.c からコピペした箇所のプレフィクス vge_ は vgs2_ に置換する必要があります。
 
 （補足）
 - 上記の手順を踏めば、putkanji関数で日本語フォントを表示できます。
